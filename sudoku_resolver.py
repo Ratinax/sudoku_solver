@@ -12,11 +12,9 @@ sudoku = [
 
 def isError(sudoku, x, y):
 	number = sudoku[y][x]
-	line = sudoku[y]
-	column = [n[x] for n in sudoku]
-	if line.count(number) >= 2:
+	if sudoku[y].count(number) >= 2:
 		return True
-	if column.count(number) >= 2:
+	if [n[x] for n in sudoku].count(number) >= 2:
 		return True
 	# TODO check if error in square
 	return False
