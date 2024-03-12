@@ -16,11 +16,15 @@ def isError(sudoku, x, y):
 		return True
 	if [n[x] for n in sudoku].count(number) >= 2:
 		return True
-	# TODO check if error in square
+	square = sudoku[(y // 3) * 3][(x // 3) * 3:(x // 3) * 3 + 3] \
+		+ sudoku[(y // 3) * 3 + 1][(x // 3) * 3:(x // 3) * 3 + 3] \
+		+ sudoku[(y // 3) * 3 + 2][(x // 3) * 3:(x // 3) * 3 + 3]
+	if square.count(number) >= 2:
+		return True
 	return False
 
-sudoku[0][2] = 4
-print(isError(sudoku, 2, 0))
+sudoku[0][1] = 5
+print(isError(sudoku, 1, 0))
 
 
 
