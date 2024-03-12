@@ -1,3 +1,5 @@
+import sys
+
 sudoku = [
 	[3, 0, 0, 0, 1, 0, 4, 0, 0],
 	[0, 0, 2, 0, 5, 0, 0 ,0 ,0],
@@ -37,9 +39,24 @@ def goBackToLastChange(sudoku, indsList):
 		i -= 1
 		indsList.pop(-1)
 		x, y = indsList[i]
-print(findXYOfFirst0(sudoku))
-sudoku[0][1] = 5
-print(isError(sudoku, 1, 0))
 
+def print_sudoku(sudoku):
+	for i in range(9):
+		if i >= 3 and i % 3 == 0:
+			sys.stdout.write('\n')
+		for j in range(9):
+			if j >= 3 and j % 3 == 0:
+				sys.stdout.write(' ')
+			sys.stdout.write(str((sudoku[i][j]) % 9))
+		sys.stdout.write("\n")
+	for i in range(11):
+		sys.stdout.write("\033[F")
 
+# print(findXYOfFirst0(sudoku))
+# sudoku[0][1] = 5
+# print(isError(sudoku, 1, 0))
 
+print_sudoku(sudoku)
+
+for i in range(11):
+	sys.stdout.write("\n")
