@@ -32,10 +32,10 @@ def findXYOfFirst0(sudoku):
 def goBackToLastChange(sudoku, indsList):
 	i = -1
 	x, y = indsList[i]
-	while (sudoku[y][x] == 9):
+	while (len(indsList) > 0 and sudoku[y][x] == 9):
+		sudoku[y][x] = 0
 		i -= 1
-		if (sudoku[y][x] == 9):
-			sudoku[y][x] = 0
+		indsList.pop(-1)
 		x, y = indsList[i]
 print(findXYOfFirst0(sudoku))
 sudoku[0][1] = 5
