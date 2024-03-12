@@ -11,17 +11,17 @@ sudoku = [
 ]
 
 def isError(sudoku, x, y):
-	for i in range(9):
-		if i != x: # check if error on x (abscissa)
-			if sudoku[y][i] == sudoku[y][x]:
-				return True
-		if i != y:
-			if sudoku[i][x] == sudoku[y][x]: # check if error on y (ordinate)
-				return True
+	number = sudoku[y][x]
+	line = sudoku[y]
+	column = [n[x] for n in sudoku]
+	if line.count(number) >= 2:
+		return True
+	if column.count(number) >= 2:
+		return True
 	# TODO check if error in square
 	return False
 
-sudoku[0][2] = 7
+sudoku[0][2] = 4
 print(isError(sudoku, 2, 0))
 
 
