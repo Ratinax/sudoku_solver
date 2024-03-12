@@ -1,3 +1,2 @@
-liste=[2, 2, 22]
-liste.remove(4)
-print(liste)
+for i in range(2):
+	print(i)
