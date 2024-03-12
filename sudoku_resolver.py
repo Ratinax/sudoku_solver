@@ -23,6 +23,13 @@ def isError(sudoku, x, y):
 		return True
 	return False
 
+def findXYOfFirst0(sudoku):
+	for i in range(9):
+		for j in range(9):
+			if sudoku[i][j] == 0:
+				return j, i
+	return -1, -1
+print(findXYOfFirst0(sudoku))
 sudoku[0][1] = 5
 print(isError(sudoku, 1, 0))
 
