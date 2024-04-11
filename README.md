@@ -39,13 +39,15 @@ This is a python project. The aim is to find a solution for a given sudoku grid.
 ## Execution
 
 * First you have to fill sudoku grid with your own numbers
+
 ![Grid](screenshots/sudoku_grid.png)
-* Than we execute the program
+
+* Than execute the program
 ```
 	python3 sudoku_resolver.py
 ```
 ![Execution](screenshots/execution.gif)
-* Execution have been maunally slowed down to see reel effects
+* Above execution have been maunally slowed down to see reel effects
 ## Annex
 
 For better perfs it only works with 9 x 9 grid
