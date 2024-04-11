@@ -93,7 +93,6 @@ def sort_sudoku(sudoku):
 			exclude_column(j, sudoku2)
 		for j in range(9):
 			exclude_square(j, sudoku2)
-	# print(sudoku2)
 	return sudoku2
 
 def copy_numbers(sudoku, sudoku2):
