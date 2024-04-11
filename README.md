@@ -39,7 +39,7 @@ This is a python project. The aim is to find a solution for a given sudoku grid.
 
 * Than execute the program
 ```
-python3 sudoku_resolver.py
+python3 sudoku_solver.py
 ```
 ![Execution](screenshots/execution.gif)
 * Above execution have been maunally slowed down to see reel effects
