@@ -11,11 +11,6 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-      </ul>
-    </li>
     <li><a href="#Execution">Execution</a></li>
     <li><a href="#Annex">Annex</a></li>
   </ol>
